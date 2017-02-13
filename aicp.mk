@@ -26,8 +26,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common AICP stuff.
 $(call inherit-product, vendor/aicp/configs/common.mk)
 
+# Inherit telephony stuff
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := aicp_hero2lte
 PRODUCT_DEVICE := hero2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1440
+-include vendor/aicp/configs/bootanimation.mk
+
