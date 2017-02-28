@@ -39,3 +39,6 @@ PRODUCT_MANUFACTURER := samsung
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 -include vendor/aicp/configs/bootanimation.mk
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="deedwar"
